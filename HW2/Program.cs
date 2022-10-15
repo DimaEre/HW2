@@ -1,16 +1,22 @@
-﻿using System.Text;
+using System.Text;
 
-class Zad1 //Требуется сложить числа A и B
+class Program
 {
     static void Main()
     {
         int a;
-        string[] month = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+        string[] month = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
         Console.Write("Введите число A: ");
         a = Convert.ToInt32(Console.ReadLine());
-
-        Console.Write(month[a]);
+        if (a < 0 || a > 7)
+        {
+            Console.WriteLine("You're wrong");
+        }
+        else
+        {
+            Console.Write(month[a]);
+        }
         Console.ReadKey();
     }
 }
